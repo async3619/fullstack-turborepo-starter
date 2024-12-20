@@ -55,30 +55,6 @@ export const config = [
         node: true,
       },
     },
-    rules: {
-      'import/order': [
-        'error',
-        {
-          'newlines-between': 'always',
-          alphabetize: { order: 'asc' },
-          groups: [
-            'external',
-            'builtin',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
-          pathGroups: [
-            {
-              pattern: '@repo/**',
-              group: 'internal',
-              position: 'before',
-            },
-          ],
-        },
-      ],
-    },
   },
   {
     plugins: {
