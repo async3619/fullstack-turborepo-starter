@@ -28,7 +28,12 @@ module.exports = import('@repo/eslint-config/node-js').then((mod) => [
               position: 'before',
             },
             {
-              pattern: '@/abc/**',
+              pattern: '@/prisma/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/log/**',
               group: 'internal',
               position: 'before',
             },
