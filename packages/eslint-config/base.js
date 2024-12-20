@@ -37,13 +37,14 @@ export const config = [
   {
     rules: {
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/prefer-top-level-await': 'off',
     },
   },
   eslintPluginPrettierRecommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   {
-    files: ['**/*.{ts,mts,tsx}'],
+    files: ['**/*.{ts,mts,tsx,js,mjs,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
