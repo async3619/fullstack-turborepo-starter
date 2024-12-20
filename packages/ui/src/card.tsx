@@ -6,10 +6,10 @@ export function Card({
   children,
   href,
 }: {
-  className?: string
-  title: string
   children: React.ReactNode
+  className?: string
   href: string
+  title: string
 }): JSX.Element {
   return (
     <a
