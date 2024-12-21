@@ -1,4 +1,4 @@
-FROM node:23-alpine AS base
+FROM node:22.12.0-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
@@ -20,7 +20,9 @@ WORKDIR /app
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
-RUN pnpm install
+COPY --from=builder /app/apps/api/prisma ./prisma
+RUN pnpm install --frozen-lockfile
+RUN pnpm prisma generate
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
