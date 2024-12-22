@@ -24,6 +24,21 @@ export default [
               group: 'internal',
               position: 'before',
             },
+            {
+              pattern: '@mui/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/pages-lib/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/styles/**',
+              group: 'internal',
+              position: 'before',
+            },
           ],
           pathGroupsExcludedImportTypes: ['builtin'],
         },
