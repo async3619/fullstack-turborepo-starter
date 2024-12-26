@@ -6,6 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "precommit": "sh .husky/pre-commit",
+    "prepush": "sh .husky/pre-push",
     "postinstall": "prisma generate",
     "build": "nest build",
     "deploy": "prisma generate && nest build && npx prisma migrate deploy",

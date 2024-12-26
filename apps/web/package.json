@@ -4,6 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "precommit": "sh .husky/pre-commit",
+    "prepush": "sh .husky/pre-push",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
