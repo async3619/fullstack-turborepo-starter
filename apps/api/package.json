@@ -17,7 +17,11 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "e2e": "jest --config ./test/jest-e2e.json",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "knip": "knip"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "@apollo/server": "^4.11.2",
@@ -48,6 +52,8 @@
     "class-validator": "^0.14.1",
     "graphql-tag": "^2.12.6",
     "jest": "^29.5.0",
+    "knip": "^5.41.1",
+    "lint-staged": "^15.2.11",
     "pg": "^8.13.1",
     "prisma": "^6.1.0",
     "prisma-nestjs-graphql": "^20.0.3",

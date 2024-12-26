@@ -8,7 +8,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "knip": "knip"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "@apollo/client": "^3.12.4",
@@ -34,6 +38,8 @@
     "@types/node": "^20",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
+    "knip": "^5.41.1",
+    "lint-staged": "^15.2.11",
     "typescript": "5.5.4"
   }
 }

@@ -7,7 +7,7 @@ import isEqual from 'lodash/isEqual'
 import { AppProps } from 'next/app'
 import { useRef } from 'react'
 
-export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
+const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
 
 let apolloClient: ApolloClient<InMemoryCache>
 
