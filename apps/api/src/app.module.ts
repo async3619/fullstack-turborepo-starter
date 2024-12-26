@@ -14,7 +14,7 @@ import { LogModule } from '@/log/log.module'
       driver: ApolloDriver,
       autoSchemaFile:
         process.env.NODE_ENV === 'production'
-          ? false
+          ? true
           : path.join(process.cwd(), '..', '..', 'schema.gql'),
     }),
     PrismaModule,
