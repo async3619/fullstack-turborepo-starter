@@ -1,13 +1,17 @@
+import { ApolloProvider } from '@apollo/client'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { ThemeProvider } from '@mui/material'
 import { AppCacheProvider } from '@mui/material-nextjs/v13-pagesRouter'
 
+import { useApollo } from '@/lib/apollo'
+
 import { defaultTheme } from '@/styles/theme'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
+  const apolloClient = useApollo(pageProps)
 
   return (
     <>
@@ -27,7 +31,9 @@ export default function App(props: AppProps) {
       </Head>
       <AppCacheProvider {...props}>
         <ThemeProvider theme={defaultTheme}>
-          <Component {...pageProps} />
+          <ApolloProvider client={apolloClient}>
+            <Component {...pageProps} />
+          </ApolloProvider>
         </ThemeProvider>
       </AppCacheProvider>
     </>

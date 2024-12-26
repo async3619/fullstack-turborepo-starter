@@ -30,6 +30,16 @@ export default [
               position: 'before',
             },
             {
+              pattern: '@/__generated__/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/lib/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
               pattern: '@/pages-lib/**',
               group: 'internal',
               position: 'before',

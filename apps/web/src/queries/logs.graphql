@@ -1,0 +1,10 @@
+query logCount {
+  logCount
+}
+
+mutation createLog {
+  createLog {
+    id
+    createdAt
+  }
+}

@@ -11,6 +11,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@apollo/client": "^3.12.4",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
@@ -18,6 +19,10 @@
     "@mui/material": "^6.2.1",
     "@mui/material-nextjs": "^6.2.1",
     "@repo/ui": "workspace:*",
+    "apollo-link-logger": "^2.0.1",
+    "deepmerge": "^4.3.1",
+    "graphql": "^16.10.0",
+    "lodash": "^4.17.21",
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -25,6 +30,8 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/deepmerge": "^2.2.3",
+    "@types/lodash": "^4.17.13",
     "@types/node": "^20",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
