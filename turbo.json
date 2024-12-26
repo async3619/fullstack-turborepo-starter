@@ -1,7 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalEnv": ["PORT", "DATABASE_URL"],
+  "globalEnv": ["PORT", "DATABASE_URL", "NODE_ENV"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
