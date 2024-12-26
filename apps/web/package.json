@@ -18,7 +18,6 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.2.1",
     "@mui/material-nextjs": "^6.2.1",
-    "@repo/ui": "workspace:*",
     "apollo-link-logger": "^2.0.1",
     "deepmerge": "^4.3.1",
     "graphql": "^16.10.0",
